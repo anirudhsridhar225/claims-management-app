@@ -2,10 +2,9 @@ pipeline {
     agent any
     
     environment {
-        AWS_ACCOUNT_ID = '054014031154'
-        AWS_REGION = 'ap-south-2'
+        AWS_ACCOUNT_ID = 'AIDAS74TMEB2FOI2B73JQ'
+        AWS_REGION = 'eu-north-1'
         ECR_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
-        K3S_NODE_IP = '10.0.2.150' // Private IP of the k3s node
     }
     
     stages {
