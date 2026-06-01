@@ -65,7 +65,7 @@ class Settings(BaseSettings):
     ML_MODEL_PATH: str = "ml/fraud_model.pkl"
 
     # ── CORS (for React frontend & Spring Boot backend) ───────────
-    CORS_ORIGINS: str = "http://localhost:3000,http://localhost:8080,http://localhost:5173"
+    CORS_ORIGINS: str = "http://localhost:3000,http://localhost:8081,http://localhost:5173"
 
     # ── File Paths ────────────────────────────────────────────────
     DATA_DIR: str = "data/sample"
@@ -74,7 +74,7 @@ class Settings(BaseSettings):
     # ── External Services ─────────────────────────────────────────
     NOTIFICATION_SERVICE_URL: str = "http://localhost:5001"
     SERVICE_SECRET: str = "InsuranceIQInternalServiceSecret2024"
-    SPRING_BOOT_URL: str = "http://localhost:8080"
+    SPRING_BOOT_URL: str = "http://localhost:8081"
 
     @property
     def cors_origin_list(self) -> list[str]:

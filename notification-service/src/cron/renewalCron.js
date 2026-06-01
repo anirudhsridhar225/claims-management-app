@@ -15,7 +15,7 @@ function initializeCronJobs() {
         console.log('[CRON] 🔄 Running policy renewal check...');
 
         try {
-            const springBootUrl = process.env.SPRING_BOOT_URL || 'http://localhost:8080';
+            const springBootUrl = process.env.SPRING_BOOT_URL || 'http://localhost:8081';
             const response = await axios.get(`${springBootUrl}/api/policies/renewals/upcoming`);
 
             const renewals = response.data;

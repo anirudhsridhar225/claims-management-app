@@ -16,7 +16,7 @@ spec:
               service:
                 name: server-svc
                 port:
-                  number: 8080
+                  number: 8081
           
           # Socket.io
           - path: /socket.io

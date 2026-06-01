@@ -54,7 +54,7 @@ echo "[5/5] Verifying services..."
 sleep 15
 echo ""
 echo "Service health checks:"
-echo "  Spring Boot: $(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/api/health 2>/dev/null || echo 'starting...')"
+echo "  Spring Boot: $(curl -s -o /dev/null -w '%{http_code}' http://localhost:8081/api/health 2>/dev/null || echo 'starting...')"
 echo "  Python ML:   $(curl -s -o /dev/null -w '%{http_code}' http://localhost:8000/health 2>/dev/null || echo 'starting...')"
 echo "  Node.js:     $(curl -s -o /dev/null -w '%{http_code}' http://localhost:5001/health 2>/dev/null || echo 'starting...')"
 echo "  Nginx:       $(curl -s -o /dev/null -w '%{http_code}' http://localhost 2>/dev/null || echo 'starting...')"

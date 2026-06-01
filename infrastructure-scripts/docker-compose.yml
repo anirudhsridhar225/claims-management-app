@@ -37,7 +37,7 @@ services:
       APP_NOTIFICATION_SERVICE_URL: http://notification-service:5001
       APP_SERVICE_SECRET: ${SERVICE_SECRET:-InsuranceIQInternalServiceSecret2024}
     ports:
-      - "8080:8080"
+      - "8081:8081"
 
   # ── Python ML Service ──
   ml-service:
@@ -53,7 +53,7 @@ services:
       FRAUD_DETECTION_MODE: RULE_BASED
       NOTIFICATION_SERVICE_URL: http://notification-service:5001
       SERVICE_SECRET: ${SERVICE_SECRET:-InsuranceIQInternalServiceSecret2024}
-      SPRING_BOOT_URL: http://server:8080
+      SPRING_BOOT_URL: http://server:8081
       HOST: 0.0.0.0
       PORT: 8000
     ports:
@@ -75,7 +75,7 @@ services:
       DB_USER: root
       DB_PASSWORD: ${DB_PASSWORD:-root}
       JWT_SECRET: ${JWT_SECRET:-InsuranceIQSecretKey2024VeryLongSecretKeyForHS256AlgorithmMinimum256Bits}
-      SPRING_BOOT_URL: http://server:8080
+      SPRING_BOOT_URL: http://server:8081
     ports:
       - "5001:5001"
 

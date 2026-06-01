@@ -40,7 +40,7 @@ spec:
                   name: insuranceiq-secrets
                   key: jwt-secret
             - name: SPRING_BOOT_URL
-              value: "http://server-svc:8080"
+              value: "http://server-svc:8081"
           resources:
             requests:
               cpu: "100m"

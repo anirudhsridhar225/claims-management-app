@@ -17,7 +17,7 @@ spec:
         - name: server
           image: ${ECR_REGISTRY}/insuranceiq-server:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:mysql://mysql:3306/insuranceiq_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"
@@ -51,7 +51,7 @@ spec:
               memory: "768Mi"
           readinessProbe:
             tcpSocket:
-              port: 8080
+              port: 8081
             initialDelaySeconds: 30
             periodSeconds: 15
 ---
@@ -66,8 +66,8 @@ spec:
     app: server
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 8081
+      targetPort: 8081
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler

@@ -33,7 +33,7 @@ spec:
             - name: NOTIFICATION_SERVICE_URL
               value: "http://notification-svc:5001"
             - name: SPRING_BOOT_URL
-              value: "http://server-svc:8080"
+              value: "http://server-svc:8081"
             - name: SERVICE_SECRET
               valueFrom:
                 secretKeyRef:
